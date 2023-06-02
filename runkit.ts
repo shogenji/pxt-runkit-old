@@ -54,7 +54,7 @@ namespace runkit {
     }
 
     //% blockId=move_backward_msec
-    //% weight=70
+    //% weight=90
     //% block="Move backward for $duration"
     //% block.loc.ja="さがる（ミリ秒） $duration"
     //% duration.min=0 duration.max=1000000 duration.defl=1000
@@ -67,7 +67,7 @@ namespace runkit {
     }
 
     //% blockId=rotate_ccw_msec
-    //% weight=90
+    //% weight=80
     //% block="Rotate counter-clockwise for $duration"
     //% block.loc.ja="左回転（ミリ秒） $duration"
     //% duration.min=0 duration.max=1000000 duration.defl=1000
@@ -81,7 +81,7 @@ namespace runkit {
     }
 
     //% blockId=rotate_cw_msec
-    //% weight=80
+    //% weight=70
     //% block="Rotate clockwise for $duration"
     //% block.loc.ja="右回転（ミリ秒） $duration"
     //% duration.min=0 duration.max=1000000 duration.defl=1000
