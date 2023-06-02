@@ -1,4 +1,4 @@
-//% weight=100 color=#ff8800 icon="\uf1b9"
+//% weight=100 color=#ff7700 icon="\uf1b9"
 //% block="RunKit"
 //% block.loc.ja="走らせようキット"
 //% groups="['Movements', 'Settings']"
@@ -11,7 +11,7 @@ namespace runkit {
     let speedMax = 512
 
     //% blockId=speed_ratio
-    //% block="Speed"
+    //% block="Speed Ratio"
     //% block.loc.ja="スピード"
     let speedRatio = 50
 
@@ -42,9 +42,9 @@ namespace runkit {
 
     //% blockId=move_forward_msec
     //% weight=100
-    //% block="move forward for $duration"
+    //% block="Move forward for $duration"
     //% block.loc.ja="すすむ（ミリ秒）$duration"
-    //% duration.min=0 duration.max=100000 duration.defl=1000
+    //% duration.min=0 duration.max=1000000 duration.defl=1000
     //% duration.shadow="timePicker"
     //% group="Movements"
     export function moveForwardForMsec(duration: number): void {
@@ -53,11 +53,24 @@ namespace runkit {
         motorOff(Motors.Both)
     }
 
+    //% blockId=move_backward_msec
+    //% weight=70
+    //% block="Move backward for $duration"
+    //% block.loc.ja="さがる（ミリ秒） $duration"
+    //% duration.min=0 duration.max=1000000 duration.defl=1000
+    //% duration.shadow="timePicker"
+    //% group="Movements"
+    export function moveBackwardForMsec(duration: number): void {
+        motorOn(Motors.Both, Dir.Backward, speedRatio)
+        basic.pause(duration)
+        motorOff(Motors.Both)
+    }
+
     //% blockId=rotate_ccw_msec
     //% weight=90
-    //% block="rotate counter-clockwise for $duration"
+    //% block="Rotate counter-clockwise for $duration"
     //% block.loc.ja="左回転（ミリ秒） $duration"
-    //% duration.min=0 duration.max=100000 duration.defl=1000
+    //% duration.min=0 duration.max=1000000 duration.defl=1000
     //% duration.shadow="timePicker"
     //% group="Movements"
     export function rotateCcwForMsec(duration: number): void {
@@ -69,9 +82,9 @@ namespace runkit {
 
     //% blockId=rotate_cw_msec
     //% weight=80
-    //% block="rotate clockwise for $duration"
+    //% block="Rotate clockwise for $duration"
     //% block.loc.ja="右回転（ミリ秒） $duration"
-    //% duration.min=0 duration.max=100000 duration.defl=1000
+    //% duration.min=0 duration.max=1000000 duration.defl=1000
     //% duration.shadow="timePicker"
     //% group="Movements"
     export function turnCwForMsec(duration: number): void {
@@ -81,25 +94,11 @@ namespace runkit {
         motorOff(Motors.Both)
     }
 
-    //% blockId=move_backward_msec
-    //% weight=70
-    //% block="move backward for $duration"
-    //% block.loc.ja="さがる（ミリ秒） $duration"
-    //% duration.min=0 duration.max=100000 duration.defl=1000
-    //% duration.shadow="timePicker"
-    //% group="Movements"
-    export function moveBackwardForMsec(duration: number): void {
-        motorOn(Motors.Both, Dir.Backward, speedRatio)
-        basic.pause(duration)
-        motorOff(Motors.Both)
-    }
-
     //% blockId=stop_for_msec
     //% weight=60
-    //% block="stop || for $duration"
+    //% block="Stop || for $duration"
     //% block.loc.ja="止まる ||（ミリ秒） $duration"
-    //% duration.min=0 duration.max=100000 duration.defl=1000
-    //% duration.defl=0
+    //% duration.min=0 duration.max=1000000 duration.defl=0
     //% duration.shadow="timePicker"
     //% group="Movements"
     export function stopForMsec(duration?: number): void {
@@ -109,9 +108,9 @@ namespace runkit {
 
 
 
-    //% blockId=set_speed_ratio_shadow
+    //% blockId=set_speed_ratio
     //% weight=50
-    //% block="set speed ratio to $speed"
+    //% block="Set speed ratio to $speed"
     //% block.loc.ja="スピードを $speed ％に設定する"
     //% speed.min=0 speed.max=100
     //% speed.shadow="speedPicker"
@@ -127,10 +126,9 @@ namespace runkit {
 
     //% blockId=set_max_speed
     //% weight=40
-    //% block="set max $speed"
+    //% block="Set max speed to $speed"
     //% block.loc.ja="最高スピードを $speed に設定する"
-    //% speed.min=0 speed.max=1023
-    //% speed.defl=256
+    //% speed.min=0 speed.max=1023 speed.defl=256
     //% group="Settings"
     export function setMaxSpeed(speed: number): void {
         if (speed < 0) {
@@ -147,13 +145,14 @@ namespace runkit {
     /**
      * Sets the requested motor running in chosen direction at a set speed.
      * If setup is not complete, calls the initialisation routine.
-     * @param motor which motor to turn on
-     * @param dir which direction to go
+     * @param motors which motor to turn on
+     * @param direction which direction to go
      * @param speed how fast to spin the motor
      */
     //% blockId=motor_on
-    //% block="turn $motors motor on direction $direction at speed $speed"
+    //% block="Turn $motors motor on direction $direction at speed $speed"
     //% speed.min=0 speed.max=100
+    //% speed.shadow="speedPicker"
     function motorOn(motors: Motors, direction: Dir, speed: number): void {
         /*convert 0-100 to 0-1023 by a simple multiple by (speedMax / 100) */
         let outputVal = Math.round(speed * speedMax / 100)
@@ -189,8 +188,7 @@ namespace runkit {
      * @param motor which motor to turn off
      */
     //% blockId=motor_off
-    //% weight=70
-    //% block="turn off $motor motor"
+    //% block="Turn off $motor motor"
     function motorOff(motors: Motors): void {
         switch (motors) {
             case Motors.Left:

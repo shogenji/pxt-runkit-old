@@ -1,12 +1,10 @@
 {
-    "name": "Run Kit",
+    "name": "走らせようキット",
     "description": "",
     "dependencies": {
-        "core": "*",
-        "microphone": "*"
+        "core": "*"
     },
     "files": [
-        "main.ts",
         "README.md",
         "runkit.ts"
     ],
