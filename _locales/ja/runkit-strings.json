@@ -1,9 +1,9 @@
 {
-  "runkit.moveForwardMsec|block": "すすむ（ミリ秒）$duration",
-  "runkit.move_backward_msec|block": "さがる（ミリ秒） $duration",
-  "runkit.rotate_ccw_msec|block": "左回転（ミリ秒） $duration",
-  "runkit.rotate_cw_msec|block": "右回転（ミリ秒） $duration",
-  "runkit.stop_for_msec|block": "止まる ||（ミリ秒） $duration",
-  "runkit.set_speed_ratio|block": "スピードを $speed ％に設定する",
-  "runkit.set_max_speed|block": "最高スピードを $speed に設定する"
+  "runkit.moveForwardFor|block": "すすむ（ミリ秒）$duration",
+  "runkit.moveBackwardFor|block": "さがる（ミリ秒） $duration",
+  "runkit.rotateCcwFor|block": "左回転（ミリ秒） $duration",
+  "runkit.rotateCwFor|block": "右回転（ミリ秒） $duration",
+  "runkit.stopFor|block": "止まる ||（ミリ秒） $duration",
+  "runkit.setSpeedRatio|block": "スピードを $speed ％に設定する",
+  "runkit.setMaxSpeed|block": "最高スピードを $speed に設定する"
 }

@@ -40,67 +40,67 @@ namespace runkit {
     }
 
 
-    //% blockId=move_forward_msec
+    //% blockId=move_forward
     //% weight=100
     //% block="Move forward for $duration"
     //% duration.min=0 duration.max=1000000 duration.defl=1000
     //% duration.shadow="timePicker"
     //% group="Movements"
-    export function moveForwardForMsec(duration: number): void {
+    export function moveForwardFor(duration: number): void {
         motorOn(Motors.Both, Dir.Forward, speedRatio)
         basic.pause(duration)
         motorOff(Motors.Both)
     }
 
-    //% blockId=move_backward_msec
+    //% blockId=move_backward
     //% weight=90
     //% block="Move backward for $duration"
     //% block.loc.ja="さがる（ミリ秒） $duration"
     //% duration.min=0 duration.max=1000000 duration.defl=1000
     //% duration.shadow="timePicker"
     //% group="Movements"
-    export function moveBackwardForMsec(duration: number): void {
+    export function moveBackwardFor(duration: number): void {
         motorOn(Motors.Both, Dir.Backward, speedRatio)
         basic.pause(duration)
         motorOff(Motors.Both)
     }
 
-    //% blockId=rotate_ccw_msec
+    //% blockId=rotate_ccw
     //% weight=80
     //% block="Rotate counter-clockwise for $duration"
     //% block.loc.ja="左回転（ミリ秒） $duration"
     //% duration.min=0 duration.max=1000000 duration.defl=1000
     //% duration.shadow="timePicker"
     //% group="Movements"
-    export function rotateCcwForMsec(duration: number): void {
+    export function rotateCcwFor(duration: number): void {
         motorOn(Motors.Left, Dir.Backward, speedRatio)
         motorOn(Motors.Right, Dir.Forward, speedRatio)
         basic.pause(duration)
         motorOff(Motors.Both)
     }
 
-    //% blockId=rotate_cw_msec
+    //% blockId=rotate_cw
     //% weight=70
     //% block="Rotate clockwise for $duration"
     //% block.loc.ja="右回転（ミリ秒） $duration"
     //% duration.min=0 duration.max=1000000 duration.defl=1000
     //% duration.shadow="timePicker"
     //% group="Movements"
-    export function turnCwForMsec(duration: number): void {
+    export function turnCwFor(duration: number): void {
         motorOn(Motors.Left, Dir.Forward, speedRatio)
         motorOn(Motors.Right, Dir.Backward, speedRatio)
         basic.pause(duration)
         motorOff(Motors.Both)
     }
 
-    //% blockId=stop_for_msec
+    //% blockId=stop
     //% weight=60
     //% block="Stop || for $duration"
     //% block.loc.ja="止まる ||（ミリ秒） $duration"
     //% duration.min=0 duration.max=1000000 duration.defl=0
     //% duration.shadow="timePicker"
     //% group="Movements"
-    export function stopForMsec(duration?: number): void {
+    export function stopFor(duration?: number): void {
         motorOff(Motors.Both)
         basic.pause(duration)
     }
@@ -114,7 +114,7 @@ namespace runkit {
     //% speed.min=0 speed.max=100
     //% speed.shadow="speedPicker"
     //% group="Settings"
-    export function setSpeedRatioShadow(speed: number): void {
+    export function setSpeedRatio(speed: number): void {
         if (speed < 0) {
             speed = 0
         } else if (speed > 100) {
