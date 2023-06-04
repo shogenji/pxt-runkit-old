@@ -7,5 +7,5 @@
   "runkit.setSpeedRatio|block": "スピードを $speed ％に設定する",
   "runkit.setMaxSpeed|block": "最高スピードを $speed に設定する",
   "{id:category}Movements": "動作",
-  "{id:category}Settings": "設定"
+  "{id:groups}Settings": "設定"
 }
