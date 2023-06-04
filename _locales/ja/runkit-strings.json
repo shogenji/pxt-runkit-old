@@ -5,5 +5,7 @@
   "runkit.rotateCwFor|block": "右回転（ミリ秒） $duration",
   "runkit.stopFor|block": "止まる ||（ミリ秒） $duration",
   "runkit.setSpeedRatio|block": "スピードを $speed ％に設定する",
-  "runkit.setMaxSpeed|block": "最高スピードを $speed に設定する"
+  "runkit.setMaxSpeed|block": "最高スピードを $speed に設定する",
+  "{id:category}Movements": "動作",
+  "{id:category}Settings": "設定"
 }
