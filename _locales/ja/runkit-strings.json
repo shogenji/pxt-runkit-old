@@ -1,9 +1,5 @@
 {
-  "runkit.Motors.left|block": "左側", 
-  "runkit.Motors.right|block": "右側", 
-  "runkit.Motors.both|block": "両方", 
-  "runkit.Motors.left|block": "左側", 
-  "runkit.move_forward_msec|block": "すすむ（ミリ秒）$duration",
+  "runkit.moveForwardMsec|block": "すすむ（ミリ秒）$duration",
   "runkit.move_backward_msec|block": "さがる（ミリ秒） $duration",
   "runkit.rotate_ccw_msec|block": "左回転（ミリ秒） $duration",
   "runkit.rotate_cw_msec|block": "右回転（ミリ秒） $duration",
