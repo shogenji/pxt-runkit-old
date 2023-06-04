@@ -1,7 +1,7 @@
 //% weight=100 color=#ff7700 icon="\uf1b9"
 //% block="RunKit"
 //% block.loc.ja="走らせようキット"
-//% groups="['Movements', 'Settings']"
+//% groups=['Movements', 'Settings']
 //% groups.loc.ja="['動作', '設定']"
 namespace runkit {
 
