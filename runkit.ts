@@ -2,7 +2,7 @@
  * Extensions for "micro:bit wo Hashiraseyo Kit."
  */
 //% weight=100 color=#ff7700 icon="\uf1b9"
-//% block="RunKit"
+//% block="Run Kit"
 //% groups="['Movements', 'Settings']"
 namespace runkit {
 
@@ -116,17 +116,6 @@ namespace runkit {
 
 
 
-    /**
-     * Sets the requested motor running in chosen direction at a set speed.
-     * If setup is not complete, calls the initialisation routine.
-     * @param motors which motor to turn on
-     * @param direction which direction to go
-     * @param speed how fast to spin the motor
-     */
-    //% blockId=motor_on
-    //% block="Turn $motors motor on direction $direction at speed $speed"
-    //% speed.min=0 speed.max=100
-    //% speed.shadow="speedPicker"
     function motorOn(motors: Motors, direction: Dir, speed: number): void {
         /* convert 0-100 to 0-1023 by a simple multiple by (speedMax / 100) */
         let outputVal = Math.round(speed * speedMax / 100)
@@ -157,12 +146,6 @@ namespace runkit {
         }
     }
 
-    /**
-     * Turns off the specified motor.
-     * @param motors which motor to turn off
-     */
-    //% blockId=motor_off
-    //% block="Turn off $motor motor"
     function motorOff(motors: Motors): void {
         switch (motors) {
             case Motors.Left:
