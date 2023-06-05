@@ -3,7 +3,5 @@
   "runkit.moveBackward|block": "さがる（ミリ秒） $duration",
   "runkit.rotateCcw|block": "左回転（ミリ秒） $duration",
   "runkit.rotateCw|block": "右回転（ミリ秒） $duration",
-  "runkit.stop|block": "止まる ||（ミリ秒） $duration",
-  "runkit.setSpeedRatio|block": "スピードを $speed ％に設定する",
-  "runkit.setMaxSpeed|block": "最高スピードを $speed に設定する"
+  "runkit.stop|block": "止まる ||（ミリ秒） $duration"
 }
