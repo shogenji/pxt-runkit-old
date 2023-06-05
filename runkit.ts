@@ -6,32 +6,17 @@
 //% groups="['Movements', 'Settings']"
 namespace runkit {
 
-    //% blockId=speed_max
-    //% block="Max Speed"
     let speedMax = 512
-
-    //% blockId=speed_ratio
-    //% block="Speed Ratio"
     let speedRatio = 50
 
     enum Motors {
-        //% blockId=left_motor
-        //% block="left"
         Left = 0,
-        //% blockId=right_motor
-        //% block="right"
         Right = 1,
-        //% blockId=both_motors
-        //% block="both"
         Both = 2
     }
 
     enum Dir {
-        //% blockId=direction_forward
-        //% block="Forward"
         Forward = 0,
-        //% blockId=direction_backward
-        //% block="Backward"
         Backward = 1
     }
 
@@ -42,7 +27,7 @@ namespace runkit {
     //% duration.min=0 duration.max=1000000 duration.defl=1000
     //% duration.shadow="timePicker"
     //% group="Movements"
-    export function moveForwardFor(duration: number): void {
+    export function moveForward(duration: number): void {
         motorOn(Motors.Both, Dir.Forward, speedRatio)
         basic.pause(duration)
         motorOff(Motors.Both)
@@ -54,7 +39,7 @@ namespace runkit {
     //% duration.min=0 duration.max=1000000 duration.defl=1000
     //% duration.shadow="timePicker"
     //% group="Movements"
-    export function moveBackwardFor(duration: number): void {
+    export function moveBackward(duration: number): void {
         motorOn(Motors.Both, Dir.Backward, speedRatio)
         basic.pause(duration)
         motorOff(Motors.Both)
@@ -66,7 +51,7 @@ namespace runkit {
     //% duration.min=0 duration.max=1000000 duration.defl=1000
     //% duration.shadow="timePicker"
     //% group="Movements"
-    export function rotateCcwFor(duration: number): void {
+    export function rotateCcw(duration: number): void {
         motorOn(Motors.Left, Dir.Backward, speedRatio)
         motorOn(Motors.Right, Dir.Forward, speedRatio)
         basic.pause(duration)
@@ -79,7 +64,7 @@ namespace runkit {
     //% duration.min=0 duration.max=1000000 duration.defl=1000
     //% duration.shadow="timePicker"
     //% group="Movements"
-    export function turnCwFor(duration: number): void {
+    export function turnCw(duration: number): void {
         motorOn(Motors.Left, Dir.Forward, speedRatio)
         motorOn(Motors.Right, Dir.Backward, speedRatio)
         basic.pause(duration)
@@ -92,7 +77,7 @@ namespace runkit {
     //% duration.min=0 duration.max=1000000 duration.defl=0
     //% duration.shadow="timePicker"
     //% group="Movements"
-    export function stopFor(duration?: number): void {
+    export function stop(duration?: number): void {
         motorOff(Motors.Both)
         basic.pause(duration)
     }
@@ -143,7 +128,7 @@ namespace runkit {
     //% speed.min=0 speed.max=100
     //% speed.shadow="speedPicker"
     function motorOn(motors: Motors, direction: Dir, speed: number): void {
-        /*convert 0-100 to 0-1023 by a simple multiple by (speedMax / 100) */
+        /* convert 0-100 to 0-1023 by a simple multiple by (speedMax / 100) */
         let outputVal = Math.round(speed * speedMax / 100)
         if (outputVal > speedMax) {
             outputVal = speedMax
@@ -168,13 +153,13 @@ namespace runkit {
                 break
 
             default:
-            //Stop - something has gone wrong
+            // Stop - something has gone wrong
         }
     }
 
     /**
      * Turns off the specified motor.
-     * @param motor which motor to turn off
+     * @param motors which motor to turn off
      */
     //% blockId=motor_off
     //% block="Turn off $motor motor"
@@ -191,7 +176,7 @@ namespace runkit {
                 pins.digitalWritePin(DigitalPin.P16, 0)
                 break
             default:
-            //Stop - something has gone wrong
+            // Stop - something has gone wrong
         }
     }
 }
