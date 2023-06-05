@@ -1,7 +1,3 @@
 {
-  "runkit.moveForward|block": "すすむ（ミリ秒）$duration",
-  "runkit.moveBackward|block": "さがる（ミリ秒） $duration",
-  "runkit.rotateCcw|block": "左回転（ミリ秒） $duration",
-  "runkit.rotateCw|block": "右回転（ミリ秒） $duration",
-  "runkit.stop|block": "止まる ||（ミリ秒） $duration"
+  "runkit.moveForward|block": "すすむ（ミリ秒）$duration"
 }
