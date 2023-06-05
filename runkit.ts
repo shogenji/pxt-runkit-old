@@ -1,32 +1,25 @@
 //% weight=100 color=#ff7700 icon="\uf1b9"
 //% block="RunKit"
-//% block.loc.ja="走らせようキット"
 //% groups="['Movements', 'Settings']"
-//% groups.loc.ja="['動作', '設定']"
 namespace runkit {
 
     //% blockId=speed_max
     //% block="Max Speed"
-    //% block.loc.ja="最高スピード"
     let speedMax = 512
 
     //% blockId=speed_ratio
     //% block="Speed Ratio"
-    //% block.loc.ja="スピード"
     let speedRatio = 50
 
     enum Motors {
         //% blockId=left_motor
         //% block="left"
-        //% block.loc.ja="左側"
         Left = 0,
         //% blockId=right_motor
         //% block="right"
-        //% block.loc.ja="右側"
         Right = 1,
         //% blockId=both_motors
         //% block="both"
-        //% block.loc.ja="両方"
         Both = 2
     }
 
@@ -55,7 +48,6 @@ namespace runkit {
     //% blockId=move_backward
     //% weight=90
     //% block="Move backward for $duration"
-    //% block.loc.ja="さがる（ミリ秒） $duration"
     //% duration.min=0 duration.max=1000000 duration.defl=1000
     //% duration.shadow="timePicker"
     //% group="Movements"
@@ -68,7 +60,6 @@ namespace runkit {
     //% blockId=rotate_ccw
     //% weight=80
     //% block="Rotate counter-clockwise for $duration"
-    //% block.loc.ja="左回転（ミリ秒） $duration"
     //% duration.min=0 duration.max=1000000 duration.defl=1000
     //% duration.shadow="timePicker"
     //% group="Movements"
@@ -82,7 +73,6 @@ namespace runkit {
     //% blockId=rotate_cw
     //% weight=70
     //% block="Rotate clockwise for $duration"
-    //% block.loc.ja="右回転（ミリ秒） $duration"
     //% duration.min=0 duration.max=1000000 duration.defl=1000
     //% duration.shadow="timePicker"
     //% group="Movements"
@@ -96,7 +86,6 @@ namespace runkit {
     //% blockId=stop
     //% weight=60
     //% block="Stop || for $duration"
-    //% block.loc.ja="止まる ||（ミリ秒） $duration"
     //% duration.min=0 duration.max=1000000 duration.defl=0
     //% duration.shadow="timePicker"
     //% group="Movements"
@@ -110,7 +99,6 @@ namespace runkit {
     //% blockId=set_speed_ratio
     //% weight=50
     //% block="Set speed ratio to $speed"
-    //% block.loc.ja="スピードを $speed ％に設定する"
     //% speed.min=0 speed.max=100
     //% speed.shadow="speedPicker"
     //% group="Settings"
@@ -126,7 +114,6 @@ namespace runkit {
     //% blockId=set_max_speed
     //% weight=40
     //% block="Set max speed to $speed"
-    //% block.loc.ja="最高スピードを $speed に設定する"
     //% speed.min=0 speed.max=1023 speed.defl=256
     //% group="Settings"
     export function setMaxSpeed(speed: number): void {
