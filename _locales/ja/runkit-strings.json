@@ -1,4 +1,4 @@
 {
   "runkit.moveForward|block": "すすむ（ミリ秒）$duration",
-  "runkit|block": "らん"
+  "runkit.Run_Kit|block": "らん"
 }
