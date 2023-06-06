@@ -5,7 +5,7 @@
 //% block="Run Kit"
 //% block.loc.ja="走らせようキット"
 //% groups="['Movements', 'Settings']"
-//% groups.loc.ja="['動作', '設定']"
+//% groups[0].loc.ja="動作"
 namespace runkit {
 
     let speedMax = 512
@@ -30,7 +30,6 @@ namespace runkit {
     //% duration.min=0 duration.max=1000000 duration.defl=1000
     //% duration.shadow="timePicker"
     //% group="Movements"
-    //% groups.loc.ja = "動作"
     export function moveForward(duration: number): void {
         motorOn(Motors.Both, Dir.Forward, speedRatio)
         basic.pause(duration)
