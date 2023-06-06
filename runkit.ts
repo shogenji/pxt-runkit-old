@@ -5,7 +5,7 @@
 //% block="Run Kit"
 //% block.loc.ja="走らせようキット"
 //% groups="['Movements', 'Settings']"
-//% groups[0].loc.ja="動作"
+//% groups.loc.ja="['Movements', 'Settings']"
 namespace runkit {
 
     let speedMax = 512
