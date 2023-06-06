@@ -8,7 +8,8 @@
     "files": [
         "README.md",
         "runkit.ts",
-        "_locales/ja/runkit-strings.json"
+        "_locales/ja/runkit-strings.json",
+        "_locales/ja/README.md"
     ],
     "testFiles": [
         "test.ts"
