@@ -1,3 +1,4 @@
 {
-  "runkit.moveForward|block": "すすむ（ミリ秒）$duration"
+  "runkit.moveForward|block": "すすむ（ミリ秒）$duration",
+  "runkit|block": "らん"
 }
