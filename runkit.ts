@@ -98,6 +98,7 @@ namespace runkit {
     //% speed.min=0 speed.max=100
     //% speed.shadow="speedPicker"
     //% group="Settings"
+    //% subcategory="Settings"
     export function setSpeedRatio(speed: number): void {
         if (speed < 0) {
             speed = 0
@@ -113,6 +114,7 @@ namespace runkit {
     //% block.loc.ja="最高スピードを $speed に設定する"
     //% speed.min=0 speed.max=1023 speed.defl=256
     //% group="Settings"
+    //% subcategory="Settings"
     export function setMaxSpeed(speed: number): void {
         if (speed < 0) {
             speedMax = 0
