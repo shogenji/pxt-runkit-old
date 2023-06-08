@@ -10,7 +10,6 @@ namespace runkit {
     //% blockId=move_forward
     //% weight=100
     //% block="Move forward for $duration"
-    //% block.loc.ja="すすむ（ミリ秒）$duration"
     //% duration.min=0 duration.max=1000000 duration.defl=1000
     //% duration.shadow="timePicker"
     //% group="Movements"
