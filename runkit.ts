@@ -1,5 +1,5 @@
 /**
- * Extensions for "micro:bit wo Hashiraseyo Kit."
+ * Extensions for switch education's "Run your micro:bit Kit."
  */
 //% weight=100 color=#ff7700 icon="\uf1b9"
 //% block="Run Kit"
@@ -79,14 +79,11 @@ namespace runkit {
 
     //% blockId=stop
     //% weight=60
-    //% block="Stop || for $duration"
-    //% block.loc.ja="止まる ||（ミリ秒） $duration"
-    //% duration.min=0 duration.max=1000000 duration.defl=0
-    //% duration.shadow="timePicker"
+    //% block="Stop"
+    //% block.loc.ja="止まる"
     //% group="Movements"
-    export function stop(duration?: number): void {
+    export function stop(): void {
         motorOff(Motors.Both)
-        basic.pause(duration)
     }
 
 
