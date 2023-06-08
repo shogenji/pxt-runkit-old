@@ -1,6 +1,6 @@
 {
-    "name": "Run Your micro:bit Kit",
-    "version": "0.0.24",
+    "name": "走らせようキット",
+    "version": "0.0.21",
     "description": "",
     "dependencies": {
         "core": "*"

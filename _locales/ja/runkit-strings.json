@@ -5,9 +5,5 @@
   "runkit.rotateCw|block": "右回転（ミリ秒） $duration",
   "runkit.stop|block": "止まる ||（ミリ秒） $duration",
   "runkit|block": "走らせようキット",
-  "{id:category}Run Kit": "走らせようキット",
-  "{id:group}Movements": "動作",
-  "{id:group}Settings": "設定",
-  "{id:subcategory}Movements": "動作",
-  "{id:subcategory}Settings": "設定"
+  "{id:category}Movements": "動作"
 }
