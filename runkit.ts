@@ -23,6 +23,9 @@ namespace runkit {
     }
 
 
+    /**
+     * Move forward for a specified duration time (in milliseconds).
+     */
     //% blockId=move_forward
     //% weight=100
     //% block="Move forward for $duration"
@@ -36,6 +39,9 @@ namespace runkit {
         motorOff(Motors.Both)
     }
 
+    /**
+     * Move backward for a specified duration time (in milliseconds).
+     */
     //% blockId=move_backward
     //% weight=90
     //% block="Move backward for $duration"
@@ -49,6 +55,9 @@ namespace runkit {
         motorOff(Motors.Both)
     }
 
+    /**
+     * Rotate counter-clockwise for a specified duration time (in milliseconds).
+     */
     //% blockId=rotate_ccw
     //% weight=80
     //% block="Rotate counter-clockwise for $duration"
@@ -63,6 +72,9 @@ namespace runkit {
         motorOff(Motors.Both)
     }
 
+    /**
+     * Rotate clockwise for a specified duration time (in milliseconds).
+     */
     //% blockId=rotate_cw
     //% weight=70
     //% block="Rotate clockwise for $duration"
@@ -77,6 +89,9 @@ namespace runkit {
         motorOff(Motors.Both)
     }
 
+    /**
+     * Stop the movement.
+     */
     //% blockId=stop
     //% weight=60
     //% block="Stop"
